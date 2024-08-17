@@ -5,6 +5,9 @@ import { Stack } from "expo-router";
 import Header from "../../components/Header";
 import { Image } from "react-native";
 import { PieChart } from "react-native-gifted-charts";
+import ExpenseBlock from "../../components/ExpenseBlock";
+import IncomeBlock from "../../components/IncomeBlock";
+import SpendingBlock from "../../components/SpendingBlock";
 
 export default function index() {
 
@@ -95,6 +98,11 @@ export default function index() {
                 }}
               />
             </View>
+          </View>
+            <View>
+            <ExpenseBlock/>
+            <IncomeBlock/>
+            <SpendingBlock/>
           </View>
         </ScrollView>
       </View>
