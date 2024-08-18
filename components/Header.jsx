@@ -3,6 +3,7 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Colors } from "../constants/Colors";
 import { StyleSheet } from "react-native";
+import Entypo from '@expo/vector-icons/Entypo';
 
 export default function Header() {
   return (
@@ -37,9 +38,27 @@ export default function Header() {
   );
 }
 
+
+export function ProfileHeader(){
+    return(
+      <SafeAreaView style={styles.container}>
+      <View style={styles.flex}>
+          <Text style={{color:'white' , fontWeight:'700' , fontSize:25}}>
+            Profile
+          </Text>
+          <View style={{ width:35 , height:35  , backgroundColor:Colors.gray , display:'flex'  ,  alignItems:'center' , borderRadius:50 , justifyContent:'center'}}>
+            <Entypo name="dots-three-horizontal" size={20} color="white" />
+          </View>
+      </View>
+    </SafeAreaView>
+    ) 
+}
+
+
+
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 30,
+    paddingTop: 30,
     backgroundColor: Colors.light,
     paddingHorizontal: 20,
   },
@@ -49,6 +68,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+  },
+
+  flex: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    flexDirection:'row'
   },
 
   ProfileSec: {
